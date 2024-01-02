@@ -110,10 +110,12 @@ body {
   justify-content: space-between;
   padding: 0 20px;
   margin-top: 10px;
+
 }
 .login .links a {
   color: #fff;
   text-decoration: none;
+ 
 }
 
 label{
@@ -121,7 +123,7 @@ label{
     font-size: 10px;
 }
 
-button{
+.button{
 width: 100%;
   background: #0078ff;
   background: linear-gradient(45deg, #ff357a, #fff172);
@@ -131,13 +133,14 @@ width: 100%;
   position: relative;
   width: 100%;
   margin-top: 10px;
-  padding: 12px 20px;
+  padding: 3px 10px;
   border: 2px solid #fff;
   border-radius: 40px;
   font-size: 1.2em;
   color: #fff;
   box-shadow: none;
   outline: none;
+ 
 }
 .content {
     width: 420px;
@@ -159,4 +162,21 @@ width: 100%;
     text-align: center;
     text-shadow: 3px 0 3px #ee0000; 
     list-style-type: none; 
+  }
+
+  .button2 {
+  width: 100%;
+  background: #0078ff;
+  background: linear-gradient(45deg, #ff357a, #cc57c6);
+  border: none;
+  cursor: pointer; 
+  color: rgba(0, 0, 0, 0.75);
+  position: relative;
+  margin-top: 10px;
+  padding: 4px 10px;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 10px;
+  
+  
   }

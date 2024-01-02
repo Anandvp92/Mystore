@@ -35,11 +35,12 @@
                         {{ userform.password }}
                         {{ userform.password.errors }}
                     </div>
-                <button type="submit">Login</button>
+                <button class="button" type="submit">Login</button>
             </form>
             <div class="links">
-                <a href="#">Forget Password</a>
-                <a href="{% url 'register_page' %}">Signup</a>
+                <button class="button2"><a href="#">Forget Password</a></button>
+                <button class="button2"><a href="{% url 'register_page' %}">Signup</a></button>
+                
             </div>
            
             </div>
