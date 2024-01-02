@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.contrib.auth.models import AbstractBaseUser,BaseUserManager,PermissionsMixin
 
 
+
 # Create your models here.
 
 
@@ -32,6 +33,7 @@ class CustomUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
     
+    
 # Custom User Model 
 
 class CustomUserModel(AbstractBaseUser,PermissionsMixin):
@@ -50,8 +52,6 @@ class CustomUserModel(AbstractBaseUser,PermissionsMixin):
 
 
     objects=CustomUserManager()
-
-
 
 
     def __str__(self):

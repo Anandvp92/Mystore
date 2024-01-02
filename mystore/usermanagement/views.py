@@ -22,5 +22,10 @@ def register(request):
             return HttpResponse(f"Created new user {email}") 
 
         else:
-            return render(request,'register.html',context={"userform":form})
+            return render(request,"register.html",context={"userform":form})
+           
     return render(request,"register.html",context={"userform":UserForm})
+
+
+def login_page(request):
+    return render(request,"login.html",context={"userform":UserForm})

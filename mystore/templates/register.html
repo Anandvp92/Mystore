@@ -6,22 +6,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'form.css' %}">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
 </head>
 <body>
-    <div class="content">
-        <form method="post",enctype="multipart/form-data">
-            {%csrf_token%}
-    
-            {% for field in userform %}            
-            {{ field.label_tag }}
-            {{field}}
-            {{field.errors}}
+    <div class="ring">
+        <i style="--clr:#00ff0a;"></i>
+        <i style="--clr:#ff0057;"></i>
+        <i style="--clr:#fffd44;"></i>
+
+        <div class="login">
+        
+            <div class="content">
+               
+        <form method="post" enctype="multipart/form-data">
+            <h2 class="head-login">Register</h2>
+            {% csrf_token %}
+            
+            {% for field in userform %}      
+            <div class="inputBx">      
+                {{ field.label_tag }}
+                {{ field }}
+                {{ field.errors }}
+            </div>
             {% endfor %}
-       
-    <button  class="button">Submit</button>
+               <div class="containerrap">
+                <button class="button" type="submit">Register</button>
+        
+               </div>
+           
         </form>
+        <div class="links">
+            <a href="#">Forget Password</a>
+            <a href="{%url 'login_page'%}">Login</a>
+        </div>
     </div>
- 
+    
+   
+        </div>
+    </div>
 </body>
 </html>
