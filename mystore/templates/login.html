@@ -1,15 +1,17 @@
+
+
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'login.css' %}">
-</head>
-<body>
-    <!-- Ring div starts here -->
+{% block title %}Login{% endblock %}
+
+
+{%block link %}
+<link rel="stylesheet" href="{% static 'login.css' %}">
+{%endblock%}
+
+{%block content %}
+
     <div class="ring">
         <i style="--clr:#00ff0a;"></i>
         <i style="--clr:#ff0057;"></i>
@@ -19,21 +21,20 @@
         
             <div class="content">
                
-            <!-- Form starts here -->
             <form method="post" enctype="multipart/form-data">
-               
-                {% csrf_token %}
                 <h2 class="head-login">Login</h2>
+                {% csrf_token %}
+               
                 
                     <div class="inputBx">
-                        {{ userform.email.label_tag }}
-                        {{ userform.email }}
-                        {{ userform.email.errors }}
+                        {{ loginform.email.label_tag }}
+                        {{ loginform.email }}
+                        {{ loginform.email.errors }}
                     </div>
                     <div class="inputBx">
-                        {{ userform.password.label_tag }}
-                        {{ userform.password }}
-                        {{ userform.password.errors }}
+                        {{ loginform.password.label_tag }}
+                        {{ loginform.password }}
+                        {{ loginform.password.errors }}
                     </div>
                 <button class="button" type="submit">Login</button>
             </form>
@@ -44,10 +45,9 @@
             </div>
            
             </div>
-            <!-- Form ends here -->
+          
            
         </div>
     </div>
-    <!-- Ring div ends here -->
-</body>
-</html>
+
+    {%endblock%}

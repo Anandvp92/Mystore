@@ -84,21 +84,26 @@ body {
   position: relative;
   width: 100%;
   padding: 5px 10px;
-  background: transparent;
-  border: 2px solid #ffffff;
+  background:transparent;
+  border: 2px solid #fffafa;
   border-radius: 40px;
   font-size: 1em;
-  color: #fff;
+  font-weight: 800;
+  color: #ffffff;
   box-shadow: none;
   outline: none;
 }
-.login .inputBx input[type="submit"] {
-  width: 100%;
-  background: #0078ff;
-  background: linear-gradient(45deg, #ff357a, #fff172);
-  border: none;
-  cursor: pointer;
+
+
+::placeholder{
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 80%;
+  color: #ffffff;
+ 
 }
+
+
 .login .inputBx input::placeholder {
   color: rgba(255, 255, 255, 0.75);
 }
@@ -121,7 +126,9 @@ body {
 
 label{
     color: white;
-    font-size: 10px;
+    font-size: 15px;
+    font-weight: 700;
+  
 }
 
 .button{
@@ -130,15 +137,15 @@ width: 100%;
   background: linear-gradient(45deg, #ff357a, #fff172);
   border: none;
   cursor: pointer; 
-  color: rgba(255, 255, 255, 0.75);
   position: relative;
   width: 100%;
   margin-top: 10px;
   padding: 3px 10px;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
   border-radius: 40px;
-  font-size: 1.2em;
-  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  color: #ffffff;
   box-shadow: none;
   outline: none;
 
@@ -158,12 +165,11 @@ width: 100%;
 
  
 .errorlist{
-    color:rgb(255, 255, 255);
-    font-size: 10px;
-    font-weight: 500;
+    color:rgb(255, 217, 1);
+    font-weight: bold;
     text-align: center;
-    text-shadow: 3px 0 3px #ee0000; 
     list-style-type: none; 
+    font-size: 16px;
   }
 
   .button2 {
@@ -175,10 +181,11 @@ width: 100%;
   color: rgba(0, 0, 0, 0.75);
   position: relative;
   margin-top: 10px;
-  padding: 5px 10px;
-  border: 2px solid #fff;
+  padding: 5px 10px; 
   border-radius: 40px;
-  font-size: 10px;
+  font-size: 14px;
+  border: 2px solid #ffffff;
+  font-weight:bolder;
 
   
   }

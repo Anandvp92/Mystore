@@ -1,14 +1,15 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Document</title>
+{% block title %}Register{% endblock %}
+
+
+
+    {%block link %}
     <link rel="stylesheet" href="{% static 'login.css' %}">
-</head>
-<body>
+    {%endblock%}
+
+    {%block content %}
     <div class="ring">
         <i style="--clr:#00ff0a;"></i>
         <i style="--clr:#ff0057;"></i>
@@ -23,10 +24,10 @@
             {% csrf_token %}
             
             {% for field in userform %}      
-            <div class="inputBx">      
-                {{ field.label_tag }}
-                {{ field }}
-                {{ field.errors }}
+            <div class="inputBx">       
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {{ field.errors }}
             </div>
             {% endfor %}
                <div class="containerrap">
@@ -45,5 +46,5 @@
    
         </div>
     </div>
-</body>
-</html>
+
+    {%endblock%}
